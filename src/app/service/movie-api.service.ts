@@ -29,4 +29,23 @@ export class MovieApiService {
       `${this.baseUrl}/search/movie?api_key=${this.apiKey}&query=${data.movieName}`
     );
   }
+  // Get Movie Details by ID
+  getMovieDetails(data: any): Observable<any> {
+    return this.http.get(
+      `${this.baseUrl}/movie/${data}?api_key=${this.apiKey}`
+    );
+  }
+
+  // Get Movie Video
+  getMovieVideo(data: any): Observable<any> {
+    return this.http.get(
+      `${this.baseUrl}/movie/${data}/videos?api_key=${this.apiKey}`
+    );
+  }
+  // Get Movie Cast
+  getMovieCast(data: any): Observable<any> {
+    return this.http.get(
+      `${this.baseUrl}/movie/${data}/credits?api_key=${this.apiKey}`
+    );
+  }
 }

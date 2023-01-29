@@ -23,6 +23,7 @@
             src="https://image.tmdb.org/t/p/original/{{ result.poster_path }}"
             class="d-block w-100"
             alt="..."
+            [routerLink]="['/movie', result.id]"
           />
         </div>
         <div class="col-lg-9 mt-4 mb-4">
